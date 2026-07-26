@@ -2,33 +2,48 @@
 #include "assert.h"
 using namespace std;
 
-int main(){
-    
+int main()
+{
+
     int n;
     cout << "Enter a number : ";
     cin >> n;
     int count = 1;
-    assert(n<=4);
-    for(int row = 0; row<n; row++){
-        for(int col = 0; col<2*row + 1; col++){
-            if(col & 1==1){
+    assert(n <= 4);
+    for (int row = 0; row < n; row++)
+    {
+        for (int col = 0; col < 2 * row + 1; col++)
+        {
+            if (col & 1 == 1)
+            {
                 cout << "*";
-            }else{
+            }
+            else
+            {
                 cout << count++;
             }
         }
-        cout<< endl;
+        cout << endl;
     }
-    cout << count << endl;
 
-    for(int row = 0; row<n; row++){
+    int start = count - n;
+    for (int row = 0; row < n; row++)
+    {
 
-        for(int col = 0; col<2 * n - 2*row - 1; col++){
-            
+        int k = start;
+
+        for (int col = 0; col <= n - row - 1; col++)
+        {
+            cout << k;
+            if (col != n - row - 1)
+            {
+                cout << "*";
+            }
+            k++;
         }
+        start = start - (n - row - 1);
+        cout << endl;
     }
-
-
 
     return 0;
 }
