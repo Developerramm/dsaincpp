@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class main3 {
 
     public static void swap(int[] arr, int i, int j) {
@@ -27,19 +29,21 @@ public class main3 {
 
         int[] arr = { -12, 11, -13, -5, 6, -7, 5, -3, -6 };
 
-        for (int x : arr) {
-            System.out.print(x + " ");
-        }
-
-        System.out.println();
-
-        moveNegativeToBegining(arr);
+        Arrays.sort(arr);
 
         for (int x : arr) {
             System.out.print(x + " ");
         }
 
-        System.out.println();
+        // System.out.println();
+
+        // moveNegativeToBegining(arr);
+
+        // for (int x : arr) {
+        // System.out.print(x + " ");
+        // }
+
+        // System.out.println();
 
     }
 
