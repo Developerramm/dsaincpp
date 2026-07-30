@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.ArrayList;
+
 public class Main2 {
 
     // move negative to the left side of array
@@ -48,6 +50,28 @@ public class Main2 {
         }
     }
 
+    // move negative part3;
+
+    public static void move1(int[]arr){
+        ArrayList<Integer> temp = new ArrayList<Integer>();
+
+        for(int x : arr){
+            if(x > 0){
+                temp.add(x);
+            }
+        }
+
+        for(int x : arr){
+            if(x < 0){
+                temp.add(x);
+            }
+        }
+
+        for(int i = 0; i<temp.size(); i++){
+            arr[i] = temp.get(i);
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("move all negative number to the left side of array");
 
@@ -59,7 +83,8 @@ public class Main2 {
         }
 
         // moveNegative(arr);
-        moveNegative1(arr);
+        // moveNegative1(arr);
+        move1(arr);
 
         System.out.println();
         for (int x : arr) {
