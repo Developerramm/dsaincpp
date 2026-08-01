@@ -41,7 +41,23 @@ int main()
 
     int ans = squareRoot(n);
 
-    cout << ans << endl;
+    int precision = 5;
+
+    double step = 0.1;
+
+    double finalAns = ans;
+
+    for (int i = 0; i < precision; i++)
+    {
+        for (double j = ans; j * j <= n; j = j + step)
+        {
+            finalAns = j;
+        }
+
+        step = step / 10;
+    }
+
+    cout << finalAns << endl;
 
     return 0;
 }
