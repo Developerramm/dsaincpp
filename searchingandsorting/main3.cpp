@@ -10,7 +10,7 @@ int findPeakElement(vector<int> &arr){
     int m = s + (e - s) / 2;
     int ans = -1;
 
-    while(s<=e){
+    while(s<e){
 
         if(arr[m] > arr[m-1] && arr[m] > arr[m+1]){
             ans =  m;
