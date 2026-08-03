@@ -26,6 +26,17 @@ void convertIntoLowercase(char arr[])
     }
 }
 
+void addSpace(char arr[]){
+
+    int n = getLength(arr);
+
+    for(int i = 0; i<n; i++){
+        if(arr[i] == '@'){
+            arr[i] = ' ';
+        }
+    }
+}
+
 int main()
 {
 
@@ -33,6 +44,7 @@ int main()
     cout << "Enter character or string ";
     cin.getline(arr, 100);
     convertIntoLowercase(arr);
+    addSpace(arr);
     cout << arr << endl;
 
     return 0;
